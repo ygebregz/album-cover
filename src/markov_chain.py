@@ -61,6 +61,7 @@ class MarkovChain:
         rgb_data.extend(rgb_data[0:self.order])
 
         for index in range(len(rgb_data) - self.order):
+            # curr pixel + next pixels for self.order amount
             key = self.get_key(rgb_data, index)
             self.transition_matrix[key][rgb_data[index+self.order]] += 1
 
@@ -72,6 +73,7 @@ class MarkovChain:
         "Given a current state, generates the next states"
         probabilities = list(self.transition_matrix[curr_state].values())
         possible_states = list(self.transition_matrix[curr_state].keys())
+        # needed because for numpy doesn't work with the data format I have
         state_map = {i: state for i, state in enumerate(possible_states)}
         next_state_index = np.random.choice(
             list(state_map.keys()), p=probabilities)  # random selection based on probabilities
