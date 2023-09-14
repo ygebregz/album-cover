@@ -1,4 +1,8 @@
 ## Album Cover Generator
+<img width="1394" alt="Input to output comparison" src="https://github.com/ygebregz/album-cover/assets/86376122/05cfc351-41f5-48a3-b8a1-f514909fcee4">
+
+![image](https://github.com/ygebregz/album-cover/assets/86376122/fd086840-e4b2-495f-9fdf-6b713c90d098)
+
 
 ## Running the programming
 
